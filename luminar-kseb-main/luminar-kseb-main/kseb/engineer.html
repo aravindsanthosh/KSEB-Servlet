@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kstyle.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css"
+    />
+</head>
+
+<body>
+    <div>
+        <nav class="navigation">
+            <ul>
+                <li><select class="mats" name="mats" id="materials">
+                        <option value="mats">Materials</option>
+                        <option value="engineer">View Requests</option>
+                    </select></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="about.asp">Logout</a></li>
+            </ul>
+        </nav>
+
+    </div>
+  
+        <h2>Requests</h2>
+        <table id="myTable" class="table table-striped">
+            <thead>
+                <tr class="thead-dark">
+                    <th>Sl. No</th>
+                    <th>Material</th>
+                    <th>Request Date</th>
+                    <th>Lineman Name</th>
+                    <th>Phone No.</th>
+                    <th>Location</th>
+
+                    <th>Status Updated on</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+
+                </tr>
+                <tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="submit3">Accept Requests</button>
+   
+<div id="reports">
+    
+</div>
+
+</body>
+<script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-3.7.0.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $("#myTable").DataTable();
+    });
+  </script>
+</html>

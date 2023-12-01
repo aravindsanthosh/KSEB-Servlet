@@ -1,0 +1,64 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  margin: 0 40px 0 40px ;
+}
+table td,
+table th {
+
+  border: 1px solid black;
+}
+table thead tr {
+  background-color: rgb(197, 197, 233);
+}
+.dataTables_filter {
+  margin-bottom: 0px;
+}
+form {
+  width: 500px;
+  margin: 0 30PX;
+  float: left;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+

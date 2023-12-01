@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="styles/lineman.css">
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" />
+</head>
+
+<body>
+	<div>
+		<nav>
+			<ul>
+				<li><div class="dropdown">
+						<button class="dropbtn">
+							Materials <i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="#">Add Material</a> <a href="./materials-issue.html">Material
+								Issue</a>
+						</div>
+					</div></li>
+
+				<li><div class="dropdown">
+						<button class="dropbtn">
+							Payments <i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="#">Payments</a> <a href="#">Billing</a>
+						</div>
+					</div></li>
+
+
+				<li><div class="dropdown">
+						<button class="dropbtn">
+							Reports <i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="#">Material Request Report</a> <a href="#">Material
+								Issue Report</a>
+						</div>
+					</div></li>
+				<li><a href="about.asp">Logout</a></li>
+	</div>
+	</ul>
+	</nav>
+	</div>
+
+
+	<div class="centered-div">
+		<h2>Material Details</h2>
+		<table id="myTable" class="table table-striped">
+			<thead>
+				<tr class="thead-dark">
+					<th>ID</th>
+					<th>Material brand</th>
+					<th>Material name</th>
+					<th>Material type</th>
+					<th>Material quantity</th>
+
+					<th>Unit</th>
+					<th>Request Date</th>
+
+				</tr>
+			</thead>
+			<tbody id="table-body">
+
+			</tbody>
+		</table>
+
+
+
+
+	</div>
+	<div class="approve">
+		<h2>Add Material-Material Depo.</h2>
+		<form class="approve-form" action="materials" method="post"
+			class="center-form">
+
+			<input type="text" name="brand" placeholder="Material brand" /> <input
+				type="text" name="name" placeholder="Material name" /> <input
+				type="text" name="type" placeholder="Material type" /> <input
+				type="text" name="quantity" placeholder="Material quantity" /> <input
+				type="text" name="unit" placeholder="Unit" />
+			<h4>Material No: 234</h4>
+
+			<button type="submit">ADD</button>
+		</form>
+	</div>
+</body>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script>
+    $(document).ready(function () {
+      $("#myTable").DataTable();
+    });
+  </script>
+<script>
+  	fetch("http://localhost:8080/kseb/materials").then((res)=> res.text()).then((res)=>{
+  		document.getElementById("table-body").innerHTML = res
+  	})
+  </script>
+</html>

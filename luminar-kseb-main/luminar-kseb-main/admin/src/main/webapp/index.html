@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+	<div class="home">
+
+		<form class="login-form" action="login" method="post">
+			<p class="login-title">KSEB</p>
+
+			<input type="text" id="username" name="username"
+				placeholder="username"> <input type="text" id="password"
+				name="password" placeholder="password"> <select
+				class="usertype" name="userType" id="users">
+				<option value="admin">--Select User type--</option>
+				<option value="admin">Admin</option>
+				<option value="engineer">Engineer</option>
+				<option value="lineman">Lineman</option>
+				<option value="mdept">Materials Department</option>
+			</select> 
+			<p id="error-msg" class="errMsg"></p>
+			<input class="loginButton" type="submit" value="Login" />
+			
+		</form>
+		
+	</div>
+</body>
+<script>
+	const urlParams = new URLSearchParams(window.location.search);
+	const error = urlParams.get('error');
+
+	if (error) {
+		document.getElementById('error-msg').innerText = 'Invalid username or password';
+	}
+</script>
+
+</html>

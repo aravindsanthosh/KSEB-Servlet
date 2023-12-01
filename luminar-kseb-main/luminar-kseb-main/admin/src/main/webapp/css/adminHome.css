@@ -1,0 +1,175 @@
+/* Reset some default styles */
+body, h1, h2, ul {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f4f4f4;
+}
+
+/* Navigation Bar Styles */
+nav {
+	background-color: #333;
+}
+
+ul {
+	list-style-type: none;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* Container Styles */
+.container {
+	width: 90%;
+	margin: 20px auto;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	text-align: center;
+}
+
+/* Form Styles */
+.right {
+	text-align: center;
+}
+
+.right_heading {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.center-form {
+	display: block;
+	margin: 0 auto;
+	text-align: left;
+	max-width: 400px;
+}
+
+input, textarea, button, select {
+	display: block;
+	margin-bottom: 15px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #45a049;
+}
+
+/* Table Styles */
+.left {
+	margin-top: 20px;
+}
+
+.mainheading {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.table {
+	width: 90%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+.dataTables_wrapper {
+	overflow: scroll;
+}
+
+.table th, .table td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+.table th {
+	background-color: #2c332d;
+	color: white;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 90%;
+	}
+	.right, .left {
+		width: 100%;
+	}
+	.center-form {
+		max-width: none;
+	}
+}
+
+.editButton {
+	width: auto;
+	background-color:#65bdc7;
+	
+}
+.editButton:hover {
+	width: auto;
+	background-color:#509da6;
+	
+}
+.modal {
+	display: none; /* Initially hide the modal */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 70%;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}

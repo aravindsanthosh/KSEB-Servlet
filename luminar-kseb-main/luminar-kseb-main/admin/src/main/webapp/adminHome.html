@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KSEB</title>
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" />
+<link rel="stylesheet" href="css/adminHome.css" />
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="adminHome.html">Complaint</a></li>
+			<li><a href="workAllocation.html">Work Allocation</a></li>
+			
+			<li><a href="index.html">Logout</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<h1>Welcome Administrator</h1>
+
+		<div class="form">
+			<div class="left">
+				<h2 class="mainheading">List of Complaint</h2>
+				<table id="myTable" class="table table-striped">
+					<thead>
+						<tr class="thead-dark">
+							<th>Sl. No</th>
+							<th>Consumer Name</th>
+							<th>Consumer No.</th>
+							<th>Phone No.</th>
+							<th>Location</th>
+							<th>Post No.</th>
+							<th>Complaint</th>
+							<th>Date</th>
+							<th>Status</th>
+
+							<th>Action</th>
+
+						</tr>
+					</thead>
+					<tbody id="table-body">
+
+					</tbody>
+				</table>
+			</div>
+
+			<div class="right">
+
+
+
+				<button id="openModalBtn">Add Complaint</button>
+				<div id="complaintModal" class="modal">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<h2 class="modal_heading">Complaint Registration</h2>
+						<!-- Complaint registration form -->
+						<form id="complaintForm" action="addComplaint" method="post"
+							class="center-form">
+							<!-- Your form fields -->
+							<input type="text" name="consumer_name" placeholder="Consumer Name" /> 
+							<input type="text" name="consumer_number" placeholder="Consumer Number" /> 
+							<input type="tel" name="phone_number" placeholder="Phone Number" /> 
+							<input type="text" name="location" placeholder="Location" /> 
+							<input  type="text" name="post_no" placeholder="Post No" />
+							<textarea name="complaint" placeholder="Complaint"></textarea>
+							<input type="submit" value="Save" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+      $("#myTable").DataTable();
+    });
+  </script>
+<script>
+  	fetch("http://localhost:8080/kseb/get-complaints").then((res)=> res.text()).then((res)=>{
+  		document.getElementById("table-body").innerHTML = res
+  	})
+  </script>
+<script>
+    // Function to open the modal
+    function openModal() {
+      document.getElementById('complaintModal').style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      document.getElementById('complaintModal').style.display = 'none';
+    }
+
+    // Event listener to open the modal when the button is clicked
+    document.getElementById('openModalBtn').addEventListener('click', openModal);
+
+    // Event listener to close the modal when the close button is clicked
+    document.getElementsByClassName('close')[0].addEventListener('click', closeModal);
+
+    // Close the modal when clicking outside the modal content
+    window.addEventListener('click', function(event) {
+      if (event.target == document.getElementById('complaintModal')) {
+        closeModal();
+      }
+    });
+  </script>
+</html>

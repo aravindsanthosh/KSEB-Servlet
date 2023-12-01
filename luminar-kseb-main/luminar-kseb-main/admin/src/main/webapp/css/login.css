@@ -1,0 +1,86 @@
+body{
+    background: white;
+}
+.login-form{
+
+    flex-direction: column;
+    display: flex;
+    text-decoration: solid;
+    background-color:rgb(255, 255, 255);
+    padding: 60px;
+    border-color: black;
+    border-radius: 6px;
+    box-shadow: 0px 8px 40px #3131311f;
+    
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 	margin-top:250px;
+    
+    
+    
+}
+input{
+    height: 20px;
+    width: 300px;
+    border-radius: 6px;
+    margin-bottom:20px;
+    padding: 6px;
+    border-radius: 6px;
+  	border-color:#2525252a
+}
+
+
+.loginButton{
+    border-radius: 6px;
+    height: 50px;
+    width:auto;
+    background: #1877f2;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: x-large;
+    font-weight:bolder;
+    font-stretch: ultra-expanded;
+    border: none;
+}
+.login-title{
+	margin-top:0;
+    font-size: xx-large;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight:bolder
+
+}
+label{
+    font-weight: lighter;
+    color: black
+}
+.register{
+    text-align: center;
+    margin-top:20px;
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+    
+    
+}
+.register :hover{
+    color: azure;
+    
+}
+.usertype{
+    height: 40px;
+    width: 315px;
+    border-radius: 6px;
+    margin-bottom:20px;
+    padding: 6px;
+    border-radius: 6px;
+    border-color:#2525252a
+}
+.errMsg{
+	color: red;
+	text-align: center;
+}

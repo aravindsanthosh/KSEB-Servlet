@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="styles/lineman.css">
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" />
+</head>
+<body>
+	<div>
+		<nav>
+			<ul>
+				<li><a href="./allocation.html">Work Allocation</a></li>
+				<li><a href="./index.html">Material Request</a></li>
+				<li><a href="about.asp">Logout</a></li>
+				<div class="dropdown">
+					<button class="dropbtn">
+						Reports <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+						<a href="#">Complaint Report</a> <a href="#">Work Report</a> <a
+							href="#">Material Report</a> <a href="#">Payments Report</a>
+					</div>
+				</div>
+			</ul>
+		</nav>
+	</div>
+	<div class="centered-div">
+		<table id="myTable" class="table table-striped">
+			<thead>
+				<tr class="thead-dark">
+
+					<th>Request Id</th>
+					<th>Material Id</th>
+					<th>Lineman Id</th>
+					<th>Request Date</th>
+					<th>Quantity</th>
+					<th>status</th>
+					<th>engineer approved</th>
+				</tr>
+			</thead>
+			<tbody id="table-body">
+			</tbody>
+		</table>
+	</div>
+	<div class="approve">
+		<h2>Request New materials</h2>
+		<form class="approve-form" action="materials-request" method="post" class="center-form">
+
+			<input type="text" name="material" placeholder="Material" />
+			 <input type="text" name="quantity" placeholder="Quantity" /> 
+				<input type="text" name="lineman" placeholder="Lineman" />
+
+			<button type="submit">Submit Request</button>
+		</form>
+	</div>
+</body>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script>
+    $(document).ready(function () {
+      $("#myTable").DataTable();
+    });
+  </script>
+
+<script>
+    $(document).ready(function () {
+      $("#myTable").DataTable();
+    });
+    fetch("http://localhost:8080/kseb/materials-request").then((res)=> res.text()).then((res)=>{
+  		document.getElementById("table-body").innerHTML = res
+  	})
+  </script>

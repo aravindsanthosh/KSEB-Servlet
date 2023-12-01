@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints</title>
+    <link rel="stylesheet" href="styles/lineman.css">
+</head>
+<body>
+    <div>
+        <nav>
+            <ul>
+                
+                
+                <li><div class="dropdown">
+                  <button class="dropbtn">Reports
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#">Complaint Report</a>
+                    
+                    <a href="#">Payments Report</a>
+                  </div>
+                
+              
+              </div></li>
+              <li><a href="about.asp">Logout</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="approve">
+        <h1>Welcome Consumer,</h1>
+        <form class="approve-form"action="lineman" method="post" class="center-form">
+          <h2>Complaint Form</h2>
+          <input type="text" name="consumer-number" placeholder="Consumer Number">
+          <input type="text" name="post-number" placeholder="Post Number">
+          <textarea type="text" name="details" placeholder="Complaint Details"></textarea>
+          <input type="submit">Submit</input>
+
+        </form></div>
+        <div class="centered-div">
+            <h2>Complaint Details</h2>
+           
+            
+            <div><table id="myTable" class="table table-striped">
+                <thead>
+                    <tr class="thead-dark">
+                        <th>Sl. No</th>
+                        <th>Consumer Number</th>
+                        <th>Post No.</th>
+                        <th>Reg. Date</th>
+                        
+                        <th>Status</th>
+                        <th>Details</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                   
+                </tbody>
+            </table></div>
+            
+            </div>
+  <script>
+  	fetch("http://localhost:8080/kseb/lineman").then((res)=> res.text()).then((res)=>{
+  		document.getElementById("table-body").innerHTML += res
+  	})
+  </script>
+</body>
+</html>

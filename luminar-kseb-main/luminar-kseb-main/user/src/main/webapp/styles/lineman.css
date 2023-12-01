@@ -1,0 +1,182 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  body{
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F9F9F9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Form Styles */
+.right {
+  text-align: center;
+}
+.right_heading {
+  color: #333;
+}
+.center-form {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  max-width: 400px;
+}
+input,
+textarea,
+button {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45A049;
+}
+/* Table Styles */
+.left {
+  margin-top: 20px;
+}
+.mainheading{
+  text-align: center;
+  margin: 20px 0;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.table th {
+  background-color: #2C332D;
+  color: white;
+}
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .right,
+  .left {
+    width: 100%;
+  }
+  .center-form {
+    max-width: none;
+  }
+}
+h2{
+  text-align: center;
+}
+.approve-form{
+  flex-direction: column;
+    width: 300px;
+    text-decoration: solid;
+    background-color:rgb(255, 255, 255);
+    padding: 60px;
+    border-color: black;
+    border-radius: 6px;
+    box-shadow: 0px 8px 40px #3131311f;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+}
+.approve{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.centered-div {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.myTable {
+    width: 75vw;
+}
